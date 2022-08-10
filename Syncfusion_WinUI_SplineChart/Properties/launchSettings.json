@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "WinUI_SplineChart (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "WinUI_SplineChart (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
