@@ -4,7 +4,7 @@ The WinUI Spline Chart resembles a line chart, but the difference between them i
 
 The user guide Documentation helps you to acquire more knowledge on charts and their features. You can also refer to the Feature Tour site to get an overview of all the features in a chart.
 
-![WinUI Spline Chart](https://github.com/SyncfusionExamples/How-to-create-a-Spline-Chart-in-WinUI/blob/master/spline_chart_winui.png)
+![WinUI Spline Chart](https://user-images.githubusercontent.com/53489303/183799019-b230f5c3-f6ad-4394-9767-1e8480fcdb5d.png)
 
 ### Step 1: 
 Create a simple project using the instructions given in the Getting Started with your first WinUI app documentation.
