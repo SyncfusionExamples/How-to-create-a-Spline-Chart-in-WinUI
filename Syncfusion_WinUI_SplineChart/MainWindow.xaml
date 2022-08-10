@@ -1,0 +1,53 @@
+﻿<Window
+    x:Class="WinUI_SplineChart.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:viewModel="using:WinUI_SplineChart"
+    xmlns:chart="using:Syncfusion.UI.Xaml.Charts"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Margin="10">
+        <Grid.Resources>
+            <BrushCollection x:Key="customBrushes">
+                <SolidColorBrush Color="#003C72"/>
+            </BrushCollection>
+        </Grid.Resources>
+        
+        <chart:SfCartesianChart Header="Annual Rainfall of Paris" PaletteBrushes="{StaticResource customBrushes}">
+            <chart:SfCartesianChart.DataContext>
+                <viewModel:ViewModel/>
+            </chart:SfCartesianChart.DataContext>
+
+            <chart:SfCartesianChart.Resources>
+                <ResourceDictionary>
+                    <DataTemplate x:Key="dataLabelTemplate">
+                        <Ellipse Height="8" Width="8" Fill="#003C72"/>
+                    </DataTemplate>
+                </ResourceDictionary>
+            </chart:SfCartesianChart.Resources>
+
+            <!--Initialize the horizontal axis for SfCartesianChart-->
+            <chart:SfCartesianChart.XAxes>
+                <chart:CategoryAxis PlotOffsetStart="10" PlotOffsetEnd="10" ShowGridLines="False"/>
+            </chart:SfCartesianChart.XAxes>
+
+            <!--Initialize the vertical axis for SfCartesianChart-->
+            <chart:SfCartesianChart.YAxes>
+                <chart:NumericalAxis PlotOffsetStart="30"/>
+            </chart:SfCartesianChart.YAxes>
+
+            <!--Initialize the series for SfCartesianChart-->
+            <chart:SfCartesianChart.Series>
+                <chart:SplineSeries ItemsSource="{Binding Data}"
+                                    XBindingPath="Year" YBindingPath="Counts"
+                                    ShowDataLabels="True">
+                    <chart:SplineSeries.DataLabelSettings>
+                        <chart:CartesianDataLabelSettings ContentTemplate="{StaticResource dataLabelTemplate}"/>
+                    </chart:SplineSeries.DataLabelSettings>
+                </chart:SplineSeries>
+            </chart:SfCartesianChart.Series>
+        </chart:SfCartesianChart>
+    </Grid>
+</Window>
