@@ -1,6 +1,6 @@
 # How to create a Spline Chart in WinUI
 
-The WinUI Spline Chart resembles a line chart, but the difference between them is that instead of connecting the data points with straight lines, the data points are connected by smooth Bezier curves. This section explains how to create WinUI Spline Chart.
+The WinUI Spline Chart resembles a line chart, but the difference between them is that instead of connecting the data points with straight lines, the data points are connected by smooth Bezier curves. This section explains how to create the WinUI Spline Chart.
 
 The user guide Documentation helps you to acquire more knowledge on charts and their features. You can also refer to the Feature Tour site to get an overview of all the features in a chart.
 
@@ -21,7 +21,7 @@ xmlns:chart="using:Syncfusion.UI.Xaml.Charts"
 using Syncfusion.UI.Xaml.Charts;
 ```
 ### Step 3: 
-Initialize an empty chart with XAxes and YAxes as shown in the following code sample.
+Initialize an empty chart with the XAxes and YAxes as shown in the following code sample.
 
 **[XAML]**
 ```
@@ -51,7 +51,7 @@ chart.YAxes.Add.(yAxis);
 this.Content = chart;
 ```
 ### Step 4: 
-Initialize a data model that represents a data point for Spline Chart.
+Initialize a data model that represents a data point for a Spline Chart.
 **[C#]**
 ```
 public class Model
@@ -68,7 +68,7 @@ public class Model
 }	
 ```
 ### Step 5: 
-Create a ViewModel class with a Data Collection property using the above model and initialize a list of objects as shown in the following code sample.
+Create the ViewModel class with the Data Collection property using the above model and initialize a list of objects as shown in the following code sample.
 
 **[C#]**
 ```
@@ -92,8 +92,8 @@ public class ViewModel
 }
 ```
 ### Step 6: 
-Set the ViewModel instance as the DataContext of your window; this is done to bind properties of ViewModel to the chart.
-> Note: Add namespace of ViewModel class to your XAML page, if you prefer to set DataContext in XAML.
+Set the ViewModel instance as the DataContext of your window; this is done to bind properties of the ViewModel to the chart.
+> Note: Add the namespace of the ViewModel class to your XAML page, if you prefer to set the DataContext in XAML.
 
 **[XAML]**
 ```
@@ -112,7 +112,7 @@ SfCartesianChart chart = new SfCartesianChart();
 chart.DataContext = new ViewModel();
 ```
 ### Step 7: 
-Populate the chart with data.
+Populate the chart with the data.
 
 As we are going to visualize the comparison of annual rainfall in the data model, add SplineSeries to SfCartesianChart.Series property, and then bind the Data property of the above ViewModel to the SplineSeries ItemsSource property as shown in the following code sample.
 > Note: Need to set XBindingPath and YBindingPath properties so that series will fetch values from the respective properties in the data model to plot the series.
@@ -150,5 +150,7 @@ chart.Series.Add(series);
 this.Content = chart;
 ```
  
+ KB article - [How to create a Spline Chart in WinUI (SfCartesianChart)?
+](https://www.syncfusion.com/kb/13592/how-to-create-a-spline-chart-in-winuisfcartesianchart)
 
 
