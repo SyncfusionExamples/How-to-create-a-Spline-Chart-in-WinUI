@@ -1,4 +1,4 @@
-# How to create a Spline Chart in WinUI
+# How to create a WinUI Spline Chart (SfCartesianChart)?
 
 The [WinUI Spline Chart](https://www.syncfusion.com/winui-controls/charts/winui-spline-chart) is similar to a line chart, but the difference between them is that instead of connecting the data points with straight lines, the data points are connected by smooth Bezier curves. This section explains how to create the WinUI Spline Chart.
 
@@ -150,7 +150,4 @@ chart.Series.Add(series);
 this.Content = chart;
 ```
  
- KB article - [How to create a Spline Chart in WinUI (SfCartesianChart)?
-](https://www.syncfusion.com/kb/13592/how-to-create-a-spline-chart-in-winuisfcartesianchart)
-
-
+KB article - [How to create a WinUI Spline Chart (SfCartesianChart)?](https://www.syncfusion.com/kb/13592/how-to-create-a-winui-spline-chart-sfcartesianchart)
